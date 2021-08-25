@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const BarcodeContainer = React.forwardRef(({ children, ...props }, ref) => {
   return (
-    <Box p={4} w="40%" h="100%" ref={ref} {...props}>
+    <Box bg="white" py={4} w="40%" minH="100%" d="flex" flexDir="column" ref={ref} {...props}>
       {children}
     </Box>
   );

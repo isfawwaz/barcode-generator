@@ -53,6 +53,7 @@ const useQrCode = () => {
   });
   const [fileExt, setFileExt] = useState('svg');
   const [qrCode] = useState(new QRCodeStyling(options));
+
   const contentRef = useRef(null);
 
   const onDataChange = event => {
@@ -64,6 +65,10 @@ const useQrCode = () => {
 
   const onExtensionChange = event => {
     setFileExt(event.target.value);
+  };
+
+  const handleExtensionOptionClick = value => {
+    setFileExt(value);
   };
 
   const onDownloadClick = () => {
@@ -87,11 +92,13 @@ const useQrCode = () => {
   }, [qrCode, options]);
 
   return {
+    fileExt,
     options,
     contentRef,
     onDataChange,
     onExtensionChange,
     onDownloadClick,
+    handleExtensionOptionClick,
   };
 };
 

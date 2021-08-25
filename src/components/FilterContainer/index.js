@@ -4,7 +4,7 @@ import { Box } from '@chakra-ui/react';
 
 const FilterContainer = React.forwardRef(({ children, ...props }, ref) => {
   return (
-    <Box bg="gray.50" p={4} w="60%" h="100%" ref={ref} {...props}>
+    <Box bg="gray.50" p={4} w="60%" minH="100%" ref={ref} {...props}>
       {children}
     </Box>
   );

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const AppContainer = React.forwardRef(({ children, ...props }, ref) => {
   return (
-    <Box w="100vw" h="100vh" d="flex" className="App" ref={ref} {...props}>
+    <Box w="100vw" h="100vh" d="flex" overflowX="hidden" className="App" ref={ref} {...props}>
       {children}
     </Box>
   );

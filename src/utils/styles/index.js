@@ -28,6 +28,9 @@ const styles = {
     fontWeight: 'light',
     color: mode('gray.100', 'whiteAlpha.900')(props),
     bg: mode('gray.700', 'gray.900')(props),
+    'html, body': {
+      bg: 'gray.50',
+    },
   }),
 };
 
